@@ -8,7 +8,7 @@ session_start();
 
     $sql= "SELECT * FROM 'login' WHERE username='$username' AND password='$password'";
     $result= mysqli_query($connection, $sql);
-    $count = mysqli_num_rows($result);
+    $count = mysql_num_rows($result);
     if($count==1){
      $_SESSION['username']=$username;
     }
