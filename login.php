@@ -7,7 +7,7 @@ session_start();
       $password = $_POST['password'];
 
     $sql= "SELECT * FROM register WHERE username='$username' AND password='$password'";
-    echo $sql;
+    //echo $sql;
     $result= mysqli_query($connection, $sql);
     $count = mysqli_num_rows($result);
     //echo $count;
