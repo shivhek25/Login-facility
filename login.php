@@ -6,9 +6,11 @@ session_start();
       $username = $_POST['username'];
       $password = $_POST['password'];
 
-    $sql= "SELECT * FROM 'login' WHERE username='$username' AND password='$password'";
+    $sql= "SELECT * FROM register WHERE username='$username' AND password='$password'";
+    echo $sql;
     $result= mysqli_query($connection, $sql);
-    $count = mysql_num_rows($result);
+    $count = mysqli_num_rows($result);
+    //echo $count;
     if($count==1){
      $_SESSION['username']=$username;
     }
